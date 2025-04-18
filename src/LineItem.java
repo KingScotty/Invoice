@@ -18,4 +18,12 @@ public class LineItem {
     public int getQuantity() {
         return quantity;
     }
+
+    //print the line item
+    @Override
+    public String toString() {
+        return String.format("%-15s %-5d $%-7.2f $%-7.2f",
+                product.getName(), quantity, product.getUnitPrice(), getTotalPrice());
+    }
+
 }
