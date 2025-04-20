@@ -20,7 +20,7 @@ public class Invoice {
         return lineItems;
     }
     public double getTotalAmount () {
-        return items.stream().mapToDouble(LineItem::getTotal).sum();
+        return lineItems.stream().mapToDouble(LineItem::getTotal).sum();
     }
     public String getCustomerName() {
         return customerName;
