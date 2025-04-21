@@ -96,7 +96,7 @@ public class InvoiceJFrame  extends JFrame {
         setVisible(true);
 
         //quit button not used
-       // JButton quitButton = new JButton("Quit");
+        JButton quitButton = new JButton("Quit");
         //reset button
         JButton resetButton = new JButton("Reset");
         resetButton.addActionListener(e -> {
