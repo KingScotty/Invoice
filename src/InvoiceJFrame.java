@@ -39,12 +39,27 @@ setTitle("Invoice Generator");
             productPanel.add(new JLabel("Quantity:"));
             productPanel.add(quantityField);
 
+          //  JButton addButton = new JButton("Add Item");
+           // productPanel.add(addButton);
+           // add(productPanel, BorderLayout.CENTER);
+
             add(productPanel, BorderLayout.CENTER);
 
             //bottom buttons
-            JPanel buttonPanel = new JPanel();
-            JButton addButton = new JButton("Add Product");
-            JButton printButton = new JButton("Print Invoice");
+
+          //  JButton addButton = new JButton("Add Item");
+            JButton addButton = new JButton("Add Item");
+            productPanel.add(addButton);
+            add(productPanel, BorderLayout.CENTER);
+
+            JPanel outputPanel = new JPanel();
+            outputPanel.setLayout(new BorderLayout());
+
+
+
+
+
+
             //quit button
             JButton quitButton = new JButton("Quit");
         }
