@@ -12,10 +12,12 @@ public class InvoicePrinter {
         sb.append ("-------------------------------------\n");
 
         for (LineItem lineItem : Invoice.getLineItems()) {
-            Product p = lineItem.getProduct();
+            sb.append(lineItem).append("\n");
 
-            sb.append(String.format("%-15s %-5d $%-7.2f $%-7.2f\n",
-                    p.getName(), lineItem.getQuantity(), p.getUnitPrice(), lineItem.getTotal()));
+            //  Product p = lineItem.getProduct();
+
+            //sb.append(String.format("%-15s %-5d $%-7.2f $%-7.2f\n",
+              //      p.getName(), lineItem.getQuantity(), p.getUnitPrice(), lineItem.getTotal()));
         }
 
         sb.append("-------------------------------------\n");
