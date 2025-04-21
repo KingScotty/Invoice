@@ -1,7 +1,9 @@
 public class LineItem {
     private Product product;
     private int quantity;
-
+    public Product getProduct() {
+        return product;
+    }
     public LineItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
@@ -26,4 +28,11 @@ public class LineItem {
                 product.getName(), quantity, product.getUnitPrice(), getTotalPrice());
     }
 
-}
+    public double getTotal() {
+
+        getTotalPrice();
+        return product.getUnitPrice() * quantity;
+    }
+
+    }
+

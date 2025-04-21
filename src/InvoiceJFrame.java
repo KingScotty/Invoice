@@ -27,6 +27,25 @@ setTitle("Invoice Generator");
             customerPanel.add(customerAddressField);
             add(customerPanel, BorderLayout.NORTH);
 
-            //product form
+            //center product form
+            JPanel productPanel = new JPanel();
+            productPanel.setLayout(new GridLayout(3, 2));
+            productPanel.setBorder(BorderFactory.createTitledBorder("Product Info"));
+
+            productPanel.add (new JLabel("Product Name:"));
+            productPanel.add(productNameField);
+            productPanel.add(new JLabel("Product Price:"));
+            productPanel.add(productPriceField);
+            productPanel.add(new JLabel("Quantity:"));
+            productPanel.add(quantityField);
+
+            add(productPanel, BorderLayout.CENTER);
+
+            //bottom buttons
+            JPanel buttonPanel = new JPanel();
+            JButton addButton = new JButton("Add Product");
+            JButton printButton = new JButton("Print Invoice");
+            //quit button
+            JButton quitButton = new JButton("Quit");
         }
     }
